@@ -3,10 +3,6 @@
     --colorFuenteSecundario: #2a7ae4;
     --fondoPrincipal: #f5f5f5;
     --fondoSecundario: #eaf2fd;
-
-
-    /* TAMANOA HEADINGS */
-    --headingPrincipal: font
 }
 
 html {
@@ -33,6 +29,7 @@ li {
 
 a {
     text-decoration: none;
+    color: var(--colorFuente);
 }
 
 .boton {
