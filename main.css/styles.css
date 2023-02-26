@@ -7,7 +7,8 @@
 
 html {
     font-size: 62.5%;
-    font-family: 'Raleway', sans-serif;;
+    font-family: 'Raleway', sans-serif;
+    background-color: var(--fondoPrincipal);
 }
 
 *, *::after, *::before {
@@ -23,6 +24,17 @@ body {
 /* ========================== */
 /* GLOBALES */
 /* ========================== */
+.container {
+    max-width: 140rem;
+    margin: 0 auto;
+}
+
+@media (max-width: 780px) {
+    .container {
+        max-width: 90%;
+    }
+}
+
 li {
     list-style: none
 }
@@ -30,6 +42,11 @@ li {
 a {
     text-decoration: none;
     color: var(--colorFuente);
+}
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .boton {
@@ -51,6 +68,14 @@ a {
 .heading {
     color: var(--colorFuente);
     font-weight: bolder;
+    font-size: 2.5rem;
+}
+
+@media (min-width: 780px) {
+    .heading {
+        font-size: 5rem
+        
+    }
 }
 
 .subheading {
@@ -67,4 +92,83 @@ a {
 .texto__secundario {
     color: var(--colorFuente);
     font-size: 1.4rem;
+}
+
+/* ========================== */
+/* HEADER */
+/* ========================== */
+header {
+    padding: 4rem 0 4rem 0;
+
+}
+
+header .nombre__desarrollador {
+    display: flex;
+    gap: 1rem;
+}
+
+header .nombre__desarrollador i {
+    color: var(--colorFuente);
+}
+
+header .nombre__desarrollador p, .contacto__correo {
+    font-weight: bolder;
+    color: var(--colorFuente);
+}
+
+.nombre__desarrollador .nombre_mobile {
+    display: none;
+}
+
+@media(max-width: 600px) {
+    .nombre__desarrollador .nombre_desktop {
+        display: none;
+    }
+    .nombre__desarrollador .nombre_mobile {
+        display: inline-block;
+    }
+}
+/* HEADER NAVEGACION */
+.navegacion .navegacion__items {
+    gap: 2rem;
+}
+
+@media (max-width: 780px) {
+    .items__navegacion {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .contacto__correo {
+        font-weight: normal;
+    }
+}
+
+/* ========================== */
+/* MAIN PRESENTACION*/
+/* ========================== */
+main.presentacion {
+    margin: 2rem auto;
+}
+
+.descripcion-presentacion {
+
+}
+
+.descripcion-presentacion h1 {
+
+}
+
+.descripcion-presentacion p {
+
+}
+
+/* ENLACES PRESENTACION */
+
+
+/* PRESENTACION FOTO DE PERFIL */
+.foto__perfil img {
+    border-radius: 50%;
+    width: 100%;
 }
