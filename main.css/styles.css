@@ -28,12 +28,17 @@ body {
     max-width: 140rem;
     margin: 0 auto;
 }
-
 @media (max-width: 780px) {
     .container {
         max-width: 90%;
     }
 }
+@media (min-width: 900px) {
+    .container {
+        max-width: 85%;
+    }
+}
+
 
 li {
     list-style: none
@@ -47,6 +52,11 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+@media (max-width: 600px) {
+    .flex-column-reverse {
+        flex-direction: column-reverse;
+    }
 }
 
 .boton {
@@ -133,6 +143,11 @@ header .nombre__desarrollador p, .contacto__correo {
     gap: 2rem;
 }
 
+.items__navegacion:hover {
+    font-weight: bolder;
+    transition: all .3s ease-in-out;
+}
+
 @media (max-width: 780px) {
     .items__navegacion {
         display: none;
@@ -150,10 +165,13 @@ header .nombre__desarrollador p, .contacto__correo {
 /* ========================== */
 main.presentacion {
     margin: 2rem auto;
+    gap: 2rem
 }
 
-.descripcion-presentacion {
-
+@media (min-width: 768px) and (max-width: 900px) {
+    .descripcion-presentacion {
+        width: 50rem 
+    }
 }
 
 .descripcion-presentacion h1 {
@@ -161,14 +179,79 @@ main.presentacion {
 }
 
 .descripcion-presentacion p {
-
+    font-size: 2.5rem;
+    color: var(--colorFuente);
+    padding-right: 2rem;
+}
+@media (max-width: 768px) {
+    .descripcion-presentacion p {
+        font-size: 1.5rem;
+        padding: 0
+    }
 }
 
 /* ENLACES PRESENTACION */
+.enlaces-presentacion {
+    margin: 3rem 0;
+}
 
+.lista-enlaces__presentacion {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+@media (min-width: 780px) {
+    .lista-enlaces__presentacion {
+        gap: 4rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .lista-enlaces__presentacion li {
+        font-size: 1.3rem;
+    }
+}
+
+.lista-enlaces__presentacion li a:hover {
+    text-decoration: underline;
+}
+
+.fa-arrow-up {
+    margin: 0 1rem;
+    transform: rotate(45deg);
+    font-size: 2rem;
+}
+@media (max-width: 780px) {
+    .fa-arrow-up {
+        margin: 0 .5rem;
+        font-size: 1.2rem;
+    }
+}
 
 /* PRESENTACION FOTO DE PERFIL */
+.foto__perfil {
+    width: 100%;
+    text-align: left;
+}
 .foto__perfil img {
     border-radius: 50%;
-    width: 100%;
+    width: 15rem;
+}
+@media (min-width: 760px) and (max-width: 900px) {
+    .foto__perfil {
+        width: 26.8rem;
+        text-align: center;
+    }
+    .foto__perfil img {
+        width: 20rem;
+    }
+}
+@media (min-width: 900px) {
+    .foto__perfil {
+        width: auto;
+    }
+
+    .foto__perfil img {
+        width: 100%;
+    }
 }
