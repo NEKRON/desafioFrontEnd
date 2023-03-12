@@ -1,7 +1,6 @@
 :root {
     --colorFuente: #464646;
-    --colorFuenteSecundario: #8e9296
-    --colorFuenteBotones: #2a7ae4;
+    --colorFuenteSecundario: #8e9296;
     --fondoPrincipal: #f5f5f5;
     --fondoSecundario: #eaf2fd;
 }
@@ -40,7 +39,6 @@ body {
     }
 }
 
-
 li {
     list-style: none
 }
@@ -49,10 +47,14 @@ a {
     text-decoration: none;
     color: var(--colorFuente);
 }
+
+.flex {
+    display: flex;
+}
+
 .flex-between {
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 @media (max-width: 600px) {
     .flex-column-reverse {
@@ -84,7 +86,7 @@ a {
 
 @media (min-width: 780px) {
     .heading {
-        font-size: 5rem
+        font-size: 6rem
         
     }
 }
@@ -199,7 +201,7 @@ main.presentacion {
 .lista-enlaces__presentacion {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
 }
 @media (min-width: 780px) {
     .lista-enlaces__presentacion {
@@ -258,7 +260,7 @@ main.presentacion {
 }
 
 /* ========================== */
-/* MAIN PRESENTACION*/
+/* SOBRE MI*/
 /* ========================== */
 section.sobre__mi {
     background-color: var(--fondoSecundario);
@@ -276,10 +278,138 @@ section.sobre__mi {
 .contenido__sobre-mi p {
     font-size: 2rem;
     color: var(--colorFuenteSecundario);
-    font-weight: ;
+}
+
+@media (min-width: 1500px) {
+    .contenido__sobre-mi p {
+        padding-right: 40rem;
+    }
 }
 
 .firma__sobremi {
     margin-top: 2rem;
     width: 20rem;
+}
+
+/* ========================== */
+/* SKILLS Y HOBBIES*/
+/* ========================== */
+.skills {
+    background-color: var(--fondoPrincipal);
+    text-align: center;
+    padding-bottom: 10rem;
+}
+
+.contenido__skills-hobbies {
+
+}
+
+.contenido__skills {
+
+}
+
+.contenido__items-skills {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.items_skills {
+    background-color: #FFFFFF;
+    width: 45%;
+    height: 13rem;
+    padding: 2rem;
+    position: relative;
+}
+
+@media (min-width: 780px) {
+    .items_skills {
+        width: 30%;
+        height: 23rem;
+    }
+}
+
+
+@media (min-width: 1600px) {
+    .items_skills {
+        width: 15%;
+        height: 23rem;
+    }
+}
+
+.text__skills {
+    text-align: left;
+    position: relative;
+    top: 2rem;
+}
+@media (min-width: 768px) {
+    .text__skills {
+        top: 3rem;
+        position: absolute;
+    }
+}
+
+@media (min-width: 1200px) {
+    .text__skills {
+        top: 12rem;
+        position: absolute;
+    }
+}
+
+.items_skills i{
+    font-size: 3rem;
+    color: #2a7ae4;
+    margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+    .items_skills i{
+        font-size: 4.5rem;
+    }
+}
+
+.items_skills h2 {
+    font-size: 1.5rem;
+}
+@media (min-width: 768px) {
+    .items_skills h2 {
+        font-size: 2rem;
+    }
+}
+
+
+/* CONTENIDO HOBBIES */
+.contenido__hobbies {
+    margin-top: 10rem;
+}
+
+/* ========================== */
+/* FORMACION ACADEMICA*/
+/* ========================== */
+.formacion__academica {
+    background-color: var(--fondoSecundario);
+    
+}
+
+.escuelas__acedemica {
+    flex-wrap: wrap;
+}
+
+.tarjeta__academica {
+
+}
+
+.academica__imagen {
+
+}
+
+.academica__descripcion {
+
+}
+
+.academica__descripcion h3 {
+
+}
+
+.academica__descripcion p {
+
 }
