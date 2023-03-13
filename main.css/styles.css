@@ -3,6 +3,7 @@
     --colorFuenteSecundario: #8e9296;
     --fondoPrincipal: #f5f5f5;
     --fondoSecundario: #eaf2fd;
+    --fondoBotones: #2a7ae4;
 }
 
 html {
@@ -62,20 +63,35 @@ a {
     }
 }
 
-.boton {
+.boton, .boton-transparente {
     width: auto;
-    height: 5.1rem;
-    background: var(--colorFuenteBotones);
-    border: 1px solid var(--colorFuenteBotones);
-    color: #FFF;
-    display: inline-block;
-    padding: 1.6 2rem;
+    height: 5rem;
+    padding: 2rem 2rem;
+    border: 1px solid var(--fondoBotones);
     font-size: 1.2rem;
+}
+
+.boton:hover, .boton-transparente:hover {
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+.boton {
+    background-color: var(--fondoBotones);
+    color: #FFF;
 }
 .boton:hover {
     background-color: transparent;
-    transition: all .3s ease-in-out;
-    color: var(--colorFuenteBotones);
+    color: var(--fondoBotones);
+}
+
+.boton-transparente {
+    background-color: transparent;
+    color: var(--fondoBotones);
+}
+.boton-transparente:hover {
+    background-color: var(--fondoBotones);
+    color: #FFF;
 }
 
 .heading {
@@ -91,19 +107,30 @@ a {
     }
 }
 
-.subheading {
+.subheading, .subheading-h3, .texto__principal, .texto__secundario {
     color: var(--colorFuente);
+}
+
+.subheading {
     font-size: 1.5rem;
+}
+
+.subheading-h3 {
+    font-size: 2rem;
+    margin: 1.5rem 0;
+}
+@media (min-width: 780px) {
+    .subheading-h3 {
+        font-size: 2.5rem;
+    }
 }
 
 .texto__principal {
     font-weight: bold;
     font-size: 1.8rem;
-    color: var(--colorFuente);
 }
 
 .texto__secundario {
-    color: var(--colorFuente);
     font-size: 1.4rem;
 }
 
@@ -329,7 +356,6 @@ section.sobre__mi {
     }
 }
 
-
 @media (min-width: 1600px) {
     .items_skills {
         width: 15%;
@@ -396,7 +422,7 @@ section.sobre__mi {
 }
 
 .tarjeta__academica {
-    width: 80%;
+    width: 100%;
     margin: 0 auto
 }   
 @media (min-width: 780px) {
@@ -433,21 +459,46 @@ section.sobre__mi {
     text-align: left;
 }
 
-.academica__descripcion h3 {
-    font-size: 2    rem;
-    margin: 1rem 0
-}
-
-@media (min-width: 780px) {
-    .academica__descripcion h3 {
-        font-size: 2.5rem;
-    }
-}
-
-.academica__descripcion p {
-
-}
-
 /* ========================== */
 /* EXPERIENCIA PROFESIONAL */
 /* ========================== */
+.experiencia__profesional {
+    padding: 2rem 0;
+}
+
+.experiencia__profesional h1 {
+    text-align: center;
+}
+
+.experiencia__profesional-content {
+    margin: 5rem 0;
+    gap: 2rem;
+}
+
+.row-reverse {
+    flex-direction: row-reverse;
+}
+@media (max-width: 768px) {
+    .row-reverse {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .flex-column {
+        flex-direction: column;
+    }
+}
+
+.content__experiencia-img {
+
+}
+
+.content__experiencia-img img {
+    width: 100%;
+}
+
+.interaccion__experiencia {
+    flex-direction: column;
+    justify-content: center;
+}
