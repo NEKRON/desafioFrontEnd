@@ -490,10 +490,6 @@ section.sobre__mi {
     }
 }
 
-.content__experiencia-img {
-
-}
-
 .content__experiencia-img img {
     width: 100%;
 }
@@ -502,3 +498,113 @@ section.sobre__mi {
     flex-direction: column;
     justify-content: center;
 }
+
+/* ========================== */
+/* EXPERIENCIA PROFESIONAL */
+/* ========================== */
+.contacto {
+    background-color: var(--fondoSecundario);
+    padding: 5rem 0;
+}
+
+.contenido__contacto {
+    padding: 1rem 0;
+    gap: 2rem;
+}
+
+.contacto__img {
+    display: none;
+}
+@media (min-width: 780px){
+    .contacto__img {
+        display: inline-block;
+        width: 40%;
+        height: calc(100vh - 20rem);
+        background-image: url(../img/telefono__contacto.png);
+        background-size: cover;
+        background-position: center center;
+    }
+}
+
+.contacto__img img {
+    width: 100%;
+    margin: 0;
+}
+
+.contacto__form {
+
+}
+@media (min-width: 780px) {
+    .contacto__form {
+        width: 60%;
+    }
+}
+
+.contacto__form form {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+form .campos {
+    margin: 2rem 0;
+}
+@media (min-width: 780px) {
+    form .campos {
+        margin: 0;
+    }
+}
+form label {
+    color: var(--colorFuente);
+}
+
+form .label__contacto {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    display: inline-block;
+    font-weight: bolder;
+}
+@media (min-width: 780px) {
+    form .label__contacto {
+        font-size: 5rem;
+    }
+}
+
+form .campos input, .campos textarea{
+    border: none;
+    border-bottom: 2px solid #C8C8C8;
+    border-radius: .5rem;
+    padding-left: 2rem;
+    padding-top: 2rem;
+    font-size: 2rem;
+}
+
+form .campos input::placeholder, .campos textarea::placeholder {
+    color: #C8C8C8;;
+}
+
+form .campos input:focus, .campos textarea:focus {
+    border-bottom: 1px solid var(--fondoBotones);
+}
+
+.form__full-size {
+    width: 100%;
+    height: 7rem;
+}
+
+.mensaje {
+    height: 20rem
+}
+
+.enviar__mensaje {
+    width: 20rem;
+}
+
+@media (max-width: 768px) {
+    .enviar__mensaje {
+        margin-top: 2rem;
+    }
+}
+
