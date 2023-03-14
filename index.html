@@ -303,22 +303,22 @@
                         </div>
 
                         <div class="campos">
-                            <input type="text" placeholder="Nombre" class="form__full-size">
+                            <input type="text" placeholder="Nombre" class="form__full-size" id="nombre" >
                         </div>
 
                         <div class="campos">
-                            <input type="email" placeholder="E-mail" class="form__full-size">
+                            <input type="email" placeholder="E-mail" class="form__full-size" id="email" >
                         </div>
 
                         <div class="campos">
-                            <input type="text" placeholder="Asunto" class="form__full-size">
+                            <input type="text" placeholder="Asunto" class="form__full-size" id="asunto" >
                         </div>
 
                         <div class="campos">
-                            <textarea name="" id="" cols="30" rows="10" class="form__full-size mensaje" placeholder="Mensaje"></textarea>
+                            <textarea id="mensaje" name="mensaje" id="" cols="30" rows="10" class="form__full-size mensaje" placeholder="Mensaje"></textarea>
                         </div>
 
-                        <input type="submit" class="boton enviar__mensaje" value="Enviar mensaje">
+                        <button class="boton enviar__mensaje" id="enviar" onclick="validacionFormulario()">Enviar mensaje</button>
                         
                     </form>
                 </div>
@@ -328,8 +328,9 @@
 
     <footer>
         <div class="container">
-
+            <p>Desarrollado por Daniel Alejandro Arbelaez <br> 2022</p>
         </div>
     </footer>
 </body>
+<script src="scripts/index.js"></script>
 </html>

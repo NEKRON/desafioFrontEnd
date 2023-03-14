@@ -608,3 +608,14 @@ form .campos input:focus, .campos textarea:focus {
     }
 }
 
+/* ========================== */
+/* FOOTER */
+/* ========================== */
+footer {
+    padding: 3rem 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
